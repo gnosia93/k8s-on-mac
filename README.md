@@ -77,6 +77,8 @@ disabled_plugins = ["cri"]
 systemctl restart containerd
 cd; kubeadm init
 ```
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-control.png)
+
 
 ```
 [bootstrap-token] Using token: u64kgq.mtooviynr83s98np
