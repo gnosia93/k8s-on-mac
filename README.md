@@ -66,6 +66,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 #### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
+* root 유저로 아래 명령어 실행
 ```
 sudo su
 echo "1" > /proc/sys/net/ipv4/ip_forward
@@ -79,18 +80,14 @@ cd; kubeadm init
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-control.png)
 
+* 일반 유저 (eg. kube) 실행
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
 
 ```
-To start using your cluster, you need to run the following as a regular user:
-
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-Alternatively, if you are the root user, you can run:
-
-  export KUBECONFIG=/etc/kubernetes/admin.conf
-
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
