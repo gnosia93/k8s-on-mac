@@ -1,7 +1,7 @@
 # k8s-on-mac
 
 ### 1. UTM 설치 ###
-
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/utm.png)
 #### 1.1. hostname 변경 ####
 #### 1.2. 고정 IP 설정 ####
 #### 1.3. ssh 서버 설정 #### 
