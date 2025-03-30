@@ -26,7 +26,18 @@ sudo systemctl enable containerd
 ```
 
 
-### 3. k8s 설치 ###
+### 3. swap 메모리 제거 ###
+```
+# 파일시스템 설정
+sudo vi /etc/fstab 
+
+# 마지막 행에 주석처리
+#/swap.img      none    swap    sw      0       0
+```
+
+
+
+### 4. k8s 설치 ###
 ```
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 sudo mkdir -p -m 755 /etc/apt/keyrings
