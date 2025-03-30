@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get install containerd.io
 systemctl status containerd
 sudo systemctl start containerd
-systemctl enable containerd
+sudo systemctl enable containerd
 ```
 
 
