@@ -1,6 +1,6 @@
 # k8s-on-mac
 
-### 1. utm install ###
+### 1. UTM 설치 ###
 
 ### [2. containerd 설치](https://tuu-lx.tistory.com/3) ###
 ```
