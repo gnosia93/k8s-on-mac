@@ -53,6 +53,7 @@ Swap:              0           0           0
 
 
 ### k8s 설치 ###
+
 #### [4.1 k8s 툴 설치](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) ####
 ```
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -63,7 +64,7 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 ```
 
-#### 4.2 클러스터 설치 ####
+#### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
 
 
