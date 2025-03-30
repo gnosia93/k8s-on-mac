@@ -52,7 +52,8 @@ Swap:              0           0           0
 
 
 
-### 4. k8s 설치 ###
+### k8s 설치 ###
+#### 4.1 k8s 툴 설치 ####
 ```
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 sudo mkdir -p -m 755 /etc/apt/keyrings
@@ -61,6 +62,9 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 ```
+
+#### 4.2 클러스터 설치 ####
+
 
 
 ### [5. cgroup 드라이버](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/) ###
