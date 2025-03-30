@@ -33,6 +33,13 @@ sudo vi /etc/fstab
 
 # 마지막 행에 주석처리
 #/swap.img      none    swap    sw      0       0
+
+
+# 리부팅 후 메모리 확인
+$ free
+               total        used        free      shared  buff/cache   available
+Mem:         3996640      322084     3485432        5328      338392     3674556
+Swap:              0           0           0
 ```
 
 
