@@ -68,8 +68,9 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 ```
 sudo su
-cd 
-kubeadm init
+echo "1" > /proc/sys/net/ipv4/ip_forward
+cat /proc/sys/net/ipv4/ip_forward
+cd; kubeadm init
 ```
 
 * https://github.com/rajch/weave#using-weave-on-kubernetes
