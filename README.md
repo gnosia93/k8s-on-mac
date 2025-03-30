@@ -54,7 +54,7 @@ Swap:              0           0           0
 
 ### 4. k8s 설치 ###
 
-#### [4.1 k8s 툴 설치](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) ####
+#### [4.1 kubeadm 설치](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) ####
 ```
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 sudo mkdir -p -m 755 /etc/apt/keyrings
