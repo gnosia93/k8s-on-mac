@@ -2,6 +2,12 @@
 
 ### 1. UTM 설치 ###
 
+#### 1.1. hostname 변경 ####
+#### 1.2. 고정 IP 설정 ####
+#### 1.3. ssh 서버 설정 #### 
+#### 1.4. sudoer 등록 ####
+
+
 ### [2. containerd 설치](https://tuu-lx.tistory.com/3) ###
 ```
 # Add Docker's official GPG key:
