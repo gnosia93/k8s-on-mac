@@ -17,6 +17,12 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
+
+# Install containerd
+sudo apt-get install containerd.io
+systemctl status containerd
+sudo systemctl start containerd
+systemctl enable containerd
 ```
 
 
