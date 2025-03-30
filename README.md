@@ -70,6 +70,11 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo su
 echo "1" > /proc/sys/net/ipv4/ip_forward
 cat /proc/sys/net/ipv4/ip_forward
+
+vi /etc/containerd/config.toml
+disabled_plugins = ["cri"]
+
+systemctl restart containerd
 cd; kubeadm init
 ```
 
