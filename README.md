@@ -87,18 +87,14 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
+* [Weave CNI 설치](https://github.com/rajch/weave#using-weave-on-kubernetes)
 ```
-You should now deploy a pod network to the cluster.
-Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
-  https://kubernetes.io/docs/concepts/cluster-administration/addons/
-
-Then you can join any number of worker nodes by running the following on each as root:
+kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
 
 kubeadm join 192.168.64.3:6443 --token u64kgq.mtooviynr83s98np \
 	--discovery-token-ca-cert-hash sha256:4f5c389944b912b6a8dd9a5ad6b1f61b9cdc41b5ecba4fb7753fcce66c9cf558
 ```
 
-* https://github.com/rajch/weave#using-weave-on-kubernetes
 
 
 
