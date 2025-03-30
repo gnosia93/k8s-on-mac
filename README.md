@@ -66,6 +66,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 #### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
+* https://github.com/rajch/weave#using-weave-on-kubernetes
 
 
 
