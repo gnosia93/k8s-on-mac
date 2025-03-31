@@ -78,7 +78,9 @@ cat /proc/sys/net/ipv4/ip_forward
 * cri 활성화
 ```
 sudo vi /etc/containerd/config.toml
-#disabled_plugins = ["cri"]
+#disabled_plugins = ["cri"]          # 주석처리   
+SystemdCgroup = true                 # SystemdCgroup 라인추가 
+ 
 systemctl restart containerd
 ```
 
