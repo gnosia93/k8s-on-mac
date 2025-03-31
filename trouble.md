@@ -11,6 +11,7 @@ Mar 31 02:59:56 node01 kubelet[22759]: E0331 02:59:56.475836   22759 pod_workers
 
 * https://discuss.kubernetes.io/t/kubernetes-api-service-not-responding/24022
 * https://junkmm.tistory.com/42
-
+* https://www.reddit.com/r/kubernetes/comments/15479u4/kube_apiserver_etcd_controller_etc_crashing_after/
+  
 ## 레퍼런스 ##
 * [k8s etcd & kube-apiserver 트러블 슈팅](https://velog.io/@masterkorea01/k8s-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85)
