@@ -66,6 +66,18 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 #### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
+* enable IP forwarding
+```
+Open the terminal with superuser privileges 
+Run sudo nano /etc/sysctl.conf to open the system configuration file 
+Find the line for IP forwarding 
+Change the equation to net.ipv4.ip_forward = 1 or net.ipv6.conf.all.forwarding = 1 
+Save and close the file 
+Run sudo sysctl -p to reload the settings and apply them to the system 
+```
+
+
+
 * root 유저로 아래 명령어 실행
 ```
 sudo su
