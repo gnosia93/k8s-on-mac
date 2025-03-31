@@ -98,6 +98,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 * [Weave CNI 설치](https://github.com/rajch/weave#using-weave-on-kubernetes)
 ```
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
+```
 
 * 워커노드 조인
 ```
