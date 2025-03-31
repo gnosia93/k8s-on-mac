@@ -8,3 +8,7 @@ Mar 31 02:59:56 node01 kubelet[22759]: E0331 02:59:56.475767   22759 kuberuntime
 Mar 31 02:59:56 node01 kubelet[22759]: E0331 02:59:56.475807   22759 kuberuntime_manager.go:1079] "killPodWithSyncResult failed" err="failed to \"KillPodSandbox\" for \"c07de1d0-cd4d-4cfb-96c0-7d29fdb3d3de\" with KillPodSandboxError: \"rpc error: code = Unknown desc = failed to destroy network for sandbox \\\"ee258c47c4341e8b7cd01db20e0935093cde9cd4d04bf27413b39937adec24b8\\\": plugin type=\\\"weave-net\\\" name=\\\"weave\\\" failed (delete): Delete \\\"http://127.0.0.1:6784/ip/ee258c47c4341e8b7cd01db20e0935093cde9cd4d04bf27413b39937adec24b8\\\": dial tcp 127.0.0.1:6784: connect: connection refused\""
 Mar 31 02:59:56 node01 kubelet[22759]: E0331 02:59:56.475836   22759 pod_workers.go:1301] "Error syncing pod, skipping" err="failed to \"KillPodSandbox\" for \"c07de1d0-cd4d-4cfb-96c0-7d29fdb3d3de\" with KillPodSandboxError: \"rpc error: code = Unknown desc = failed to destroy network for sandbox \\\"ee258c47c4341e8b7cd01db20e0935093cde9cd4d04bf27413b39937adec24b8\\\": plugin type=\\\"weave-net\\\" name=\\\"weave\\\" failed (delete): Delete \\\"http://127.0.0.1:6784/ip/ee258c47c4341e8b7cd01db20e0935093cde9cd4d04bf27413b39937adec24b8\\\": dial tcp 127.0.0.1:6784: connect: connection refused\"" pod="kube-system/coredns-7c65d6cfc9-
 ```
+
+
+## 레퍼런스 ##
+* [k8s etcd & kube-apiserver 트러블 슈팅](https://velog.io/@masterkorea01/k8s-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85)
