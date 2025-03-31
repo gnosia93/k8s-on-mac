@@ -84,6 +84,9 @@ systemctl restart containerd
 
 * 클러스터 초기화
 ```
+sudo kubeadm init 
+```
+```
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.64.4
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-control.png)
