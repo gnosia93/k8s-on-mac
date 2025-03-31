@@ -105,6 +105,13 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
 ```
 
+* static 파드 확인
+```
+watch sudo crictl ps
+```  
+
+
+
 * 워커노드 조인
 ```
 kubeadm join 192.168.64.3:6443 --token u64kgq.mtooviynr83s98np \
