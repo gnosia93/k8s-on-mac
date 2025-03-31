@@ -66,28 +66,25 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 #### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
-* enable IP forwarding
+* IP 포워딩 활성화
 ```
-Open the terminal with superuser privileges 
-Run sudo nano /etc/sysctl.conf to open the system configuration file 
-Find the line for IP forwarding 
-Change the equation to net.ipv4.ip_forward = 1 or net.ipv6.conf.all.forwarding = 1 
-Save and close the file 
-Run sudo sysctl -p to reload the settings and apply them to the system
+sudo vi /etc/sysctl.conf
+net.ipv4.ip_forward = 1                 # 주석제거
+
+sudo sysctl -p
 cat /proc/sys/net/ipv4/ip_forward
 ```
 
-
-
-* root 유저로 아래 명령어 실행
+* cri 활성화
 ```
-sudo su
-
-vi /etc/containerd/config.toml
-disabled_plugins = ["cri"]
-
+sudo vi /etc/containerd/config.toml
+#disabled_plugins = ["cri"]
 systemctl restart containerd
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.64.4
+```
+
+* 클러스터 초기화
+```
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.64.4
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-control.png)
 
