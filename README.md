@@ -77,11 +77,13 @@ cat /proc/sys/net/ipv4/ip_forward
 
 * cri 활성화
 ```
-sudo vi /etc/containerd/config.toml
-#disabled_plugins = ["cri"]          # 주석처리   
-SystemdCgroup = true                 # SystemdCgroup 라인추가 
- 
-systemctl restart containerd
+cat <<EOF | sudo tee -a /etc/containerd/config.toml
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+SystemdCgroup = true
+EOF
+sudo sed -i 's/^disabled_plugins \=/\#disabled_plugins \=/g' /etc/containerd/config.toml
+sudo systemctl restart containerd
 ```
 
 * 클러스터 초기화
