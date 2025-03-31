@@ -110,7 +110,7 @@ kubeadm join 192.168.64.3:6443 --token u64kgq.mtooviynr83s98np \
 ```
 
 ## 참고자료 ##
-
+* [Ubuntu 24.04 LTS 에서 단일 노드 쿠버네티스 클러스터 구축하기](https://blog.injun.dev/posts/ubuntu-2404-kubernetes-single-node-cluster-setup/)
 * https://blog.psnote.co.kr/202
 * https://medium.com/finda-tech/overview-8d169b2a54ff 
 
