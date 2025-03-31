@@ -73,7 +73,8 @@ Run sudo nano /etc/sysctl.conf to open the system configuration file
 Find the line for IP forwarding 
 Change the equation to net.ipv4.ip_forward = 1 or net.ipv6.conf.all.forwarding = 1 
 Save and close the file 
-Run sudo sysctl -p to reload the settings and apply them to the system 
+Run sudo sysctl -p to reload the settings and apply them to the system
+cat /proc/sys/net/ipv4/ip_forward
 ```
 
 
@@ -81,8 +82,6 @@ Run sudo sysctl -p to reload the settings and apply them to the system
 * root 유저로 아래 명령어 실행
 ```
 sudo su
-echo "1" > /proc/sys/net/ipv4/ip_forward
-cat /proc/sys/net/ipv4/ip_forward
 
 vi /etc/containerd/config.toml
 disabled_plugins = ["cri"]
