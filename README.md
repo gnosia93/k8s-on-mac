@@ -96,6 +96,10 @@ kubeadm join 192.168.64.3:6443 --token u64kgq.mtooviynr83s98np \
 ```
 
 
+## 참고자료 ##
+
+* https://blog.psnote.co.kr/202
+
 
 
 
