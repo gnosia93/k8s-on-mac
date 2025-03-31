@@ -99,10 +99,11 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
 
+* 워커노드 조인
+```
 kubeadm join 192.168.64.3:6443 --token u64kgq.mtooviynr83s98np \
 	--discovery-token-ca-cert-hash sha256:4f5c389944b912b6a8dd9a5ad6b1f61b9cdc41b5ecba4fb7753fcce66c9cf558
 ```
-
 
 ## 참고자료 ##
 
