@@ -34,7 +34,7 @@ kubectl annotate gateway bookinfo-gateway networking.istio.io/service-type=Clust
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-4.png)
 
-### 서비스 조회 ###
+### 웹 서비스 조회 ###
 mac 컴퓨터에서 아래 명령어를 수행한다. 
 ```
 # gcp-context 로 변경
