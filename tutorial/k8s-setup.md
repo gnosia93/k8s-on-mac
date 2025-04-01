@@ -5,7 +5,7 @@
 * UTM 설치 - https://mac.getutm.app/
 * Ubuntu 22.04.5 LTS (Jammy Jellyfish) ARM - https://cdimage.ubuntu.com/releases/jammy/release/
 * VM 3개 만들기 - control/node01/node02
-* sudoer 등록 
+
 
 #### ssh 패스워드 없이 로그인 하기 ####
 ```
@@ -23,7 +23,10 @@ $ scp id_rsa.pub kube@node02:/home/kube/.ssh/authorized_keys
 $ ssh kube@control
 $ ssh kube@node01
 $ ssh kube@node02
-``` 
+```
+
+#### sudoer 설정 #### 
+
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 
