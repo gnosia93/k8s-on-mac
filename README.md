@@ -92,23 +92,19 @@ sudo systemctl enable kubelet
 
 #### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
-* 클러스터 초기화
+* 마스터 노드 클러스터 초기화
 ```
 sudo kubeadm init 
 ```
-```
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.64.4
-```
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-control.png)
 
-* 일반 유저 (eg. kube) 실행
+* 마스터 노드 일반 유저 (eg. kube) 실행
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-* [Weave CNI 설치](https://github.com/rajch/weave#using-weave-on-kubernetes)
+* [마스터 노드 Weave CNI 설치](https://github.com/rajch/weave#using-weave-on-kubernetes)
 ```
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
 ```
@@ -118,12 +114,10 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
 watch sudo crictl ps
 ```  
 
-
-
 * 워커노드 조인
 ```
-kubeadm join 192.168.64.3:6443 --token u64kgq.mtooviynr83s98np \
-	--discovery-token-ca-cert-hash sha256:4f5c389944b912b6a8dd9a5ad6b1f61b9cdc41b5ecba4fb7753fcce66c9cf558
+kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
+	--discovery-token-ca-cert-hash sha256:49a3064aea3bded19c6b31a46dcfeaa7c7cebbc204fc1f3b4c9ab9a130fa8920
 ```
 
 ## 참고자료 ##
