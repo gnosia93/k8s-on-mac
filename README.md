@@ -1,6 +1,6 @@
 # k8s-on-mac
 
-### 1. UTM 설치 ###
+### 1. 인프라 프로비저닝 ###
 
 * UTM 설치 - https://mac.getutm.app/
 * Ubuntu 22.04.5 LTS (Jammy Jellyfish) ARM - https://cdimage.ubuntu.com/releases/jammy/release/
