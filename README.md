@@ -145,7 +145,8 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
+curl -O https://raw.githubusercontent.com/gasida/KANS/main/kans3/calico-kans.yaml
+kubectl apply -f calico-kans.yaml
 ```
 
 * 워커노드 조인
