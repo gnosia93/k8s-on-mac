@@ -56,4 +56,4 @@ mac 컴퓨터에서 아래 명령어를 수행한다.
 kubectl apply -f samples/addons
 kubectl rollout status deployment/kiali -n istio-system
 ```
-
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-5.png)
