@@ -34,5 +34,12 @@ kubectl annotate gateway bookinfo-gateway networking.istio.io/service-type=Clust
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-4.png)
 
 ```
-kubectl port-forward svc/bookinfo-gateway-istio 8080:80
+# gcp-context 로 변경
+(base) automake@mini ~ % kubectl config use-context kubernetes-admin@kubernetes
+
+# context 조회
+(base) automake@mini ~ % kubectl config get-contexts
+
+# port forwarding 설정
+(base) automake@mini ~ % kubectl port-forward svc/bookinfo-gateway-istio 8080:80
 ```
