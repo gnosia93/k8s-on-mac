@@ -11,5 +11,5 @@ kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql -n ecommerce --dry-run=
 ```
 cat /var/lib/kubelet/config.yaml | grep staticPodPath
 staticPodPath: /etc/kubernetes/manifests
-
+cd /etc/kubernetes/manifests/
 ```
