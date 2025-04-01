@@ -74,7 +74,7 @@ sudo systemctl restart containerd
 
 ### 4. k8s 설치 ###
 
-#### [4.1 kubeadm 설치](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) ####
+#### 툴 설치 ####
 ```
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -89,30 +89,18 @@ sudo systemctl start kubelet
 sudo systemctl enable kubelet
 ```
 
+#### 클러스터 설정 ####
 
-#### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
-
-* 마스터 노드 클러스터 초기화
+* 마스터 노드 초기화
 ```
 sudo kubeadm init 
-```
 
-* 마스터 노드 일반 유저 (eg. kube) 실행
-```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-```
 
-* [마스터 노드 Weave CNI 설치](https://github.com/rajch/weave#using-weave-on-kubernetes)
-```
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
 ```
-
-* static 파드 확인
-```
-watch sudo crictl ps
-```  
 
 * 워커노드 조인
 ```
