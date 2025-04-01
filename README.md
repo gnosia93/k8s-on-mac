@@ -2,17 +2,13 @@
 
 ### 1. UTM 설치 ###
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/utm.png)
-#### 1.1. hostname 변경 ####
-#### 1.2. 고정 IP 설정 ####
-#### 1.3. ssh 서버 설정 #### 
-#### 1.4. sudoer 등록 ####
-#### 1.5. hosts 파일 수정 ####
-#### 1.6. 패스워드 없이 ssh 로그인 ####
 
+#### 1.4. sudoer 등록 ####
+#### 1.6. 패스워드 없이 ssh 로그인 ####
 
 ### 2. OS 설정 ###
 
-#### 네트워크 인퍼페이스 설정 ####
+#### 이더넷 설정 ####
 ```
 $ sudo vi /etc/netplan/00-installer-config.yaml
 
