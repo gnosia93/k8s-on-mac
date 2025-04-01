@@ -159,8 +159,8 @@ kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
 
 
 UTM VM 의 network mode 는 shared 모드로 설정되어 있고, enp0s1 인터페이스에는 두개의 IP 가 할당된다.
-* 192.168.64.5/24 는 dhcp 에 의해서 자동으로 생성되는 IP 이고,
-* 192.168.64.2 가 위에서 설정에 의해 생성된 고정 IP 이다.
+* 192.168.64.5/24 는 UTM 이 dhcp로 자동 생성한 IP 이고,
+* 192.168.64.2/24 는 [고정 IP 설정] 에서 할당한 IP 로, VM 간의 통신 또는 외부와의 통신에서 사용된다.
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/ip-addr.png)
 
