@@ -2,6 +2,8 @@
 ## [시작하기](https://istio.io/latest/docs/setup/getting-started/#download) ##
 
 ```
+ssh kube@control
+
 curl -L https://istio.io/downloadIstio | sh -
 cd istio-1.25.1
 export PATH="$PATH:/home/kube/istio-1.25.1/bin"     # ~/.profile 에 등록
