@@ -18,3 +18,7 @@ k kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v1.2.1" | kub
 k apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-2.png)
+
+```
+kubectl apply -f samples/bookinfo/gateway-api/bookinfo-gateway.yaml
+```
