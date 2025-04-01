@@ -12,7 +12,7 @@
 
 ### 2. OS 설정 ###
 
-#### 이더넷 설정 ####
+#### 네트워크 인퍼페이스 설정 ####
 ```
 $ sudo vi /etc/netplan/00-installer-config.yaml
 
