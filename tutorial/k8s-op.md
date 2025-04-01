@@ -35,7 +35,6 @@ NAME           READY   STATUS    RESTARTS   AGE     IP             NODE     NOMI
 nginx-node01   1/1     Running   0          2m19s   172.16.220.3   node01   <none>           <none>
 ```
 
-
 #### 4. 멀티 컨테이너 pod 생성하기 ####
 ```
 kubectl run multi --image=nginx --dry-run=client -o yaml > multi.yaml
@@ -60,3 +59,5 @@ kubectl get pod
 NAME           READY   STATUS    RESTARTS   AGE
 multi          3/3     Running   0          62s
 ```
+
+#### 5. ####
