@@ -121,4 +121,4 @@ kubectl apply -f eshop-cart-app.yaml
 kubectl logs eshop-cart-app -c sidecar
 ```
 
-#### 6. ####
+#### 6. deployment & pod scale ####
