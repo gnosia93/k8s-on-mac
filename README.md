@@ -10,7 +10,38 @@
 #### 1.6. 패스워드 없이 ssh 로그인 ####
 
 
-### [2. containerd 설치](https://tuu-lx.tistory.com/3) ###
+### 2. OS 설정 ###
+
+#### 네트워크 설정 ####
+```
+#/etc/modules-load.d/k8s.conf 파일 생성
+sudo cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+br_netfilter
+EOF
+ 
+#/etc/sysctl.d/k8s.conf 파일 생성
+sudo cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+
+# /etc/sysctl.conf 파일 주석 제거
+net.ipv4.ip_forward = 1                
+
+
+#시스템 재시작 없이 stysctl 파라미터 반영
+sudo sysctl --system
+```
+
+#### swap 메모리 제거 ####
+```
+# 파일시스템 설정
+sudo vi /etc/fstab 
+#/swap.img      none    swap    sw      0       0
+```
+
+
+### [3. containerd 설치](https://tuu-lx.tistory.com/3) ###
 ```
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release
@@ -40,33 +71,6 @@ vi /etc/containerd/config.toml
 
 sudo systemctl restart containerd
 ```
-
-
-### 3. swap 메모리 제거 ###
-```
-# 파일시스템 설정
-sudo vi /etc/fstab 
-
-# 마지막 행에 주석처리
-#/swap.img      none    swap    sw      0       0
-
-
-# 리부팅 후 메모리 확인
-$ free
-               total        used        free      shared  buff/cache   available
-Mem:         3996640      322084     3485432        5328      338392     3674556
-Swap:              0           0           0
-```
-
-* IP 포워딩 활성화
-```
-sudo vi /etc/sysctl.conf
-net.ipv4.ip_forward = 1                 # 주석제거
-
-sudo sysctl -p
-cat /proc/sys/net/ipv4/ip_forward
-```
-
 
 
 ### 4. k8s 설치 ###
