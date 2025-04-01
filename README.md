@@ -13,8 +13,9 @@
 ### 2. OS 설정 ###
 
 #### 이더넷 설정 ####
-sudo vi /etc/netplan/00-installer-config.yaml
 ```
+$ sudo vi /etc/netplan/00-installer-config.yaml
+
 # This file is generated from information provided by the datasource.  Changes
 # to it will not persist across an instance reboot.  To disable cloud-init's
 # network configuration capabilities, write a file
