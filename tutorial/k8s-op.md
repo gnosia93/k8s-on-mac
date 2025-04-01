@@ -61,3 +61,32 @@ multi          3/3     Running   0          62s
 ```
 
 #### 5. 사이드카 컨테이너 ####
+* 메인 컨테이너
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: eshop-cart-app
+spec:
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - 'i=1; while :;do echo -e "$1:" >> /var/log/cart-app.log; i=$((i+1)); sleep 3; done'
+    image: busybox
+    name: cart-app
+    volumeMounts:
+    - mountPath: /var/log
+      name: varlog
+  volumes:
+  - emptyDir: {}
+    name: varlog
+
+kubectl apply -f eshop-cart-app.yaml
+```
+
+* 사이드 카 컨테이너
+```
+kubectl get pod eshop-cart-app
+kubectl get pod eshop-cart-app -o yaml
+```
