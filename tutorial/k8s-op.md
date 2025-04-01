@@ -37,3 +37,9 @@ nginx-node01   1/1     Running   0          2m19s   172.16.220.3   node01   <non
 
 
 #### 4. 멀티 컨테이너 pod 생성하기 ####
+```
+kubectl run multi --image=nginx --dry-run=client -o yaml > multi.yaml
+
+vi multi.yaml 
+
+```
