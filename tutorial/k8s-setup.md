@@ -26,10 +26,10 @@ $ ssh kube@node02
 ```
 
 #### sudoer 설정 #### 
+```
 
-
+```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
-
 
 ### 2. VM 설정 ###
 
