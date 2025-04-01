@@ -116,5 +116,7 @@ spec:
   - emptyDir: {}
     name: varlog
 
+kubectl delete pod eshop-cart-app --force 
 kubectl apply -f eshop-cart-app.yaml
+kubectl logs eshop-cart-app -c sidecar
 ```
