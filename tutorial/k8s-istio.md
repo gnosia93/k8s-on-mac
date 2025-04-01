@@ -1,12 +1,7 @@
 
 ## [시작하기](https://istio.io/latest/docs/setup/getting-started/#download) ##
 
-* 맥의 ~/.kube/config 파일에 UTM 에 생성한 k8s 클러스터 정보를 추가한다 (cluster, context, user) 
-
-
-
-
-
+* mac 컴퓨터에 ~/.kube/config 파일에 UTM 에 생성한 k8s 클러스터 정보를 추가한다 (cluster, context, user) 
 
 ```
 ssh kube@control
