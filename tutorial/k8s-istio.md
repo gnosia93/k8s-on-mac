@@ -14,5 +14,6 @@ k get all -n istio-system
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-1.png)
 
 ```
-kubectl kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v1.2.1" | kubectl apply -f -
+k kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v1.2.1" | kubectl apply -f -
+k apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 ```
