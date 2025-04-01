@@ -64,3 +64,7 @@ kubectl rollout status deployment/kiali -n istio-system
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kiali-2.png)
 
+* 트래픽 주입
+```
+(base) automake@mini ~ % for i in $(seq 1 100); do curl -s -o /dev/null "http://localhost:8080/productpage"; done
+``` 
