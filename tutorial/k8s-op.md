@@ -29,4 +29,6 @@ spec:
 
 ssh kube@control
 kubectl get pod -o wide
+NAME           READY   STATUS    RESTARTS   AGE     IP             NODE     NOMINATED NODE   READINESS GATES
+nginx-node01   1/1     Running   0          2m19s   172.16.220.3   node01   <none>           <none>
 ```
