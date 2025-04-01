@@ -6,7 +6,8 @@
 * Ubuntu 22.04.5 LTS (Jammy Jellyfish) ARM - https://cdimage.ubuntu.com/releases/jammy/release/
 * VM 3개 만들기 - control/node01/node02
 * sudoer 등록 
-* 패스워드 없이 ssh 로그인
+
+#### ssh 패스워드 없이 로그인 하기 ####
 ```
 $ sudo vi /private/etc/hosts
 192.168.64.2    control
