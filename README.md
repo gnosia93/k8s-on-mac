@@ -118,7 +118,7 @@ sudo systemctl restart containerd
 ```
 
 
-### 4. k8s 설치 ###
+### 4. 쿠버네티스 클러스터 구성 ###
 
 #### 툴 설치 ####
 ```
