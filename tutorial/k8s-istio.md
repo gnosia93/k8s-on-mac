@@ -59,6 +59,7 @@ kubectl rollout status deployment/kiali -n istio-system
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-5.png)
 
 * kiali 서비스의 타입을 ClusterIp 에서 NodePort 로 변경한다.
+  
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kiali-1.png)
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kiali-2.png)
 
