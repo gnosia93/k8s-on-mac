@@ -28,7 +28,11 @@ $ ssh kube@node02
 #### sudoer 설정 #### 
 ```
 $ ssh kube@control
+$ sudo chmod 0640 /etc/sudoers
 $ sudo vi /etc/sudoers
+kube  ALL=(ALL) NOPASSWD:ALL
+
+$ sudo chmod 0440 /etc/sudoers
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 
