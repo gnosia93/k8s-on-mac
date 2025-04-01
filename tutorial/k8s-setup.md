@@ -14,6 +14,7 @@ $ sudo vi /private/etc/hosts
 192.168.64.4    node02
 
 $ ssh-keygen -t rsa
+# cd .ssh
 $ scp id_rsa.pub control:/root/.ssh/authorized_keys
 $ scp id_rsa.pub node01:/root/.ssh/authorized_keys
 $ scp id_rsa.pub node02:/root/.ssh/authorized_keys
