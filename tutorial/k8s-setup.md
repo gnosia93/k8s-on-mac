@@ -34,7 +34,6 @@ kube  ALL=(ALL) NOPASSWD:ALL     # 마지막 라인에 추가
 
 $ sudo chmod 0440 /etc/sudoers
 ```
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 
 ### 2. VM 설정 ###
 
@@ -115,6 +114,8 @@ sudo swapon -s
 
 
 ### 3. 컨테이너 런타임 인터페이스(CRI) ###
+
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 
 #### containerd 설치 ####
 ```
