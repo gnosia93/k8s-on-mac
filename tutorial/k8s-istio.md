@@ -43,3 +43,4 @@ kubectl annotate gateway bookinfo-gateway networking.istio.io/service-type=Clust
 # port forwarding 설정
 (base) automake@mini ~ % kubectl port-forward svc/bookinfo-gateway-istio 8080:80
 ```
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/k8s-context.png)
