@@ -119,7 +119,7 @@ sudo systemctl restart containerd
 ```
 
 
-### 4. 쿠버네티스 클러스터 구성 ###
+### 4. 쿠버네티스 설치 ###
 
 #### 툴 설치 ####
 ```
@@ -156,8 +156,9 @@ kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
 	--discovery-token-ca-cert-hash sha256:49a3064aea3bded19c6b31a46dcfeaa7c7cebbc204fc1f3b4c9ab9a130fa8920
 ```
 
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubectl-rs.png)
+### 5. 설치 확인 ###
 
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubectl-rs.png)
 
 UTM VM 의 network mode 는 shared 모드로 설정되어 있고, enp0s1 인터페이스에는 두개의 IP 가 할당된다.
 * 192.168.64.5/24 는 UTM 이 dhcp로 자동 생성한 IP 이고,
