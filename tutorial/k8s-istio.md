@@ -22,3 +22,4 @@ k apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 ```
 kubectl apply -f samples/bookinfo/gateway-api/bookinfo-gateway.yaml
 ```
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-3.png)
