@@ -30,7 +30,7 @@ $ ssh kube@node02
 $ ssh kube@control
 $ sudo chmod 0640 /etc/sudoers
 $ sudo vi /etc/sudoers
-kube  ALL=(ALL) NOPASSWD:ALL
+kube  ALL=(ALL) NOPASSWD:ALL     # 마지막 라인에 추가
 
 $ sudo chmod 0440 /etc/sudoers
 ```
