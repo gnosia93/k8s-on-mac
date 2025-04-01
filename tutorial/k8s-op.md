@@ -5,3 +5,6 @@ kubectl config use-context k8s
 kubectl create ns ecommerce
 kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql -n ecommerce --dry-run=client -o yaml
 ```
+
+
+#### 3. static pod ####
