@@ -159,7 +159,7 @@ kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
 
 * [UTM 고정 IP 할당](https://velog.io/@chosj1526/UTM-ubuntu-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%B6%94%EA%B0%80-%EB%B0%8F-%EA%B3%A0%EC%A0%95-ip-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0)
 * [UTM 이용해서 쿠버네티스 환경 구성하기](https://velog.io/@khj372/UTM-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0)
-
+* [Calico CNI 설치](https://kschoi728.tistory.com/255)
 
 
 
