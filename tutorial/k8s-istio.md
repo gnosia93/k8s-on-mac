@@ -27,3 +27,7 @@ kubectl apply -f samples/bookinfo/gateway-api/bookinfo-gateway.yaml
 kubectl annotate gateway bookinfo-gateway networking.istio.io/service-type=ClusterIP --namespace=default
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-4.png)
+
+```
+kubectl port-forward svc/bookinfo-gateway-istio 8080:80
+```
