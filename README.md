@@ -155,7 +155,7 @@ kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
 	--discovery-token-ca-cert-hash sha256:49a3064aea3bded19c6b31a46dcfeaa7c7cebbc204fc1f3b4c9ab9a130fa8920
 ```
 
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubectl-pods.png)
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubectl-rs.png)
 
 ## 참고자료 ##
 
