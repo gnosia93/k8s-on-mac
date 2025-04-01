@@ -11,6 +11,9 @@
 ### 2. VM 설정 ###
 
 #### 고정 IP 설정 ####
+* control : 192.168.64.2/24
+* node01 : 192.168.64.3/24
+* node02 : 192.168.64.4/24
 ```
 $ sudo vi /etc/netplan/00-installer-config.yaml
 
