@@ -19,6 +19,9 @@ $ scp id_rsa.pub kube@control:/home/kube/.ssh/authorized_keys
 $ scp id_rsa.pub kube@node01:/home/kube/.ssh/authorized_keys
 $ scp id_rsa.pub kube@node02:/home/kube/.ssh/authorized_keys
 
+$ ssh kube@control
+$ ssh kube@node01
+$ ssh kube@node02
 ``` 
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
