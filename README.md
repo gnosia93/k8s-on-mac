@@ -35,9 +35,8 @@ sudo sysctl --system
 
 #### swap 메모리 제거 ####
 ```
-# 파일시스템 설정
-sudo vi /etc/fstab 
-#/swap.img      none    swap    sw      0       0
+swapoff -a && sed -i '/swap/s/^/#/' /etc/fstab
+sudo swapon -s
 ```
 
 
