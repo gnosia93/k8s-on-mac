@@ -6,7 +6,11 @@
 * Ubuntu 22.04.5 LTS (Jammy Jellyfish) ARM - https://cdimage.ubuntu.com/releases/jammy/release/
 * VM 3개 만들기 - control/node01/node02
 * sudoer 등록 
-* 패스워드 없이 ssh 로그인 
+* 패스워드 없이 ssh 로그인
+```
+ssh-keygen -t rsa
+scp id_rsa.pub 10.30.100.32:/root/.ssh/authorized_keys
+``` 
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 
