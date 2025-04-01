@@ -12,6 +12,52 @@
 
 ### 2. OS 설정 ###
 
+#### 이더넷 설정 ####
+sudo vi /etc/netplan/00-installer-config.yaml
+```
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        enp0s1:
+            addresses:
+            - 192.168.64.2/24
+            routes:
+            - to: default
+              via: 192.168.64.1
+            nameservers:
+              addresses:
+              - 8.8.8.8
+              - 8.8.4.4
+    version: 2
+```
+
+```
+$ sudo netplan apply 
+$ ip addr
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp0s1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 3e:10:b4:af:ef:68 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.64.3/24 brd 192.168.64.255 scope global enp0s1
+       valid_lft forever preferred_lft forever
+    inet 192.168.64.6/24 metric 100 brd 192.168.64.255 scope global secondary dynamic enp0s1
+       valid_lft 2880sec preferred_lft 2880sec
+    inet6 fdca:7282:6d1f:6525:3c10:b4ff:feaf:ef68/64 scope global dynamic mngtmpaddr noprefixroute
+       valid_lft 2591909sec preferred_lft 604709sec
+    inet6 fe80::3c10:b4ff:feaf:ef68/64 scope link
+       valid_lft forever preferred_lft forever
+```
+
+
 #### 네트워크 설정 ####
 ```
 #/etc/modules-load.d/k8s.conf 파일 생성
