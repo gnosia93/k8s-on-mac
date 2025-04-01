@@ -84,7 +84,9 @@ sudo swapon -s
 ```
 
 
-### [3. containerd 설치](https://tuu-lx.tistory.com/3) ###
+### 3. cri 설치 ###
+
+#### containerd 설치 ####
 ```
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release
@@ -106,7 +108,7 @@ sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml
 ```
 
-#### cgroup driver(runc) 사용하기 설정 ####
+#### cgroup driver(runc) 설정 ####
 ```
 vi /etc/containerd/config.toml
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
