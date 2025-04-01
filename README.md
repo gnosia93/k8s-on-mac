@@ -42,12 +42,6 @@ sudo systemctl restart containerd
 ```
 
 
-
-
-
-```
-
-
 ### 3. swap 메모리 제거 ###
 ```
 # 파일시스템 설정
