@@ -58,6 +58,15 @@ Mem:         3996640      322084     3485432        5328      338392     3674556
 Swap:              0           0           0
 ```
 
+* IP 포워딩 활성화
+```
+sudo vi /etc/sysctl.conf
+net.ipv4.ip_forward = 1                 # 주석제거
+
+sudo sysctl -p
+cat /proc/sys/net/ipv4/ip_forward
+```
+
 
 
 ### 4. k8s 설치 ###
@@ -74,25 +83,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 #### [4.2 kubeadm 으로 클러스터 생성](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) ####
 
-* IP 포워딩 활성화
-```
-sudo vi /etc/sysctl.conf
-net.ipv4.ip_forward = 1                 # 주석제거
 
-sudo sysctl -p
-cat /proc/sys/net/ipv4/ip_forward
-```
-
-* cri 활성화
-```
-cat <<EOF | sudo tee -a /etc/containerd/config.toml
-[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
-[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
-SystemdCgroup = true
-EOF
-sudo sed -i 's/^disabled_plugins \=/\#disabled_plugins \=/g' /etc/containerd/config.toml
-sudo systemctl restart containerd
-```
 
 * 클러스터 초기화
 ```
