@@ -7,4 +7,4 @@ kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql -n ecommerce --dry-run=
 ```
 
 
-#### 3. static pod ####
+#### 3. static pod 생성하기 ####
