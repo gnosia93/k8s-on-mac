@@ -89,4 +89,32 @@ kubectl apply -f eshop-cart-app.yaml
 ```
 kubectl get pod eshop-cart-app
 kubectl get pod eshop-cart-app -o yaml > eshop-cart-app.yaml
+
+vi eshop-cart-app.yaml
+metadata:
+  name: eshop-cart-app
+  namespace: default
+spec:
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - 'i=1; while :;do echo -e "$1:" >> /var/log/cart-app.log; i=$((i+1)); sleep 3; done'
+    image: busybox
+    imagePullPolicy: Always
+    name: cart-app
+    volumeMounts:
+    - mountPath: /var/log
+      name: varlog
+  - name: sidecar
+    image: busybox
+    args: [/bin/sh, -c, 'tail -n+1 -F /var/log/cart-app.log']
+    volumeMounts:
+    - mountPath: /var/log
+      name: varlog
+  volumes:
+  - emptyDir: {}
+    name: varlog
+
+kubectl apply -f eshop-cart-app.yaml
 ```
