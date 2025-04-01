@@ -156,6 +156,7 @@ kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
 ```
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubectl-rs.png)
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/ip-addr.png)
 
 ## 참고자료 ##
 
