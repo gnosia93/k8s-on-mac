@@ -23,4 +23,4 @@ deployment.apps/istiod   1/1     1            1           70s
 NAME                                DESIRED   CURRENT   READY   AGE
 replicaset.apps/istiod-84dddcfb9b   1         1         1       70s
 ```
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile.png)
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-1.png)
