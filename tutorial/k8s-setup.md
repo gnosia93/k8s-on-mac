@@ -4,7 +4,8 @@
 
 * UTM 설치 - https://mac.getutm.app/
 * Ubuntu 22.04.5 LTS (Jammy Jellyfish) ARM - https://cdimage.ubuntu.com/releases/jammy/release/
-* VM 3개 만들기 - control/node01/node02
+
+#### VM 3개 만들기 - control/node01/node02 ####
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/utm.png)
 
 #### ssh 패스워드 없이 로그인 하기 ####
