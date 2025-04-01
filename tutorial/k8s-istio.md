@@ -1,11 +1,12 @@
 
 ## [시작하기](https://istio.io/latest/docs/setup/getting-started/#download) ##
 
-#### mac kubeconfig 설정 ####
+### mac kubeconfig 설정 ###
 mac 컴퓨터의 ~/.kube/config 파일에 UTM 에 생성한 k8s 클러스터 정보를 추가한다 (cluster, context, user) 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/k8s-config.png)
 
-#### istio 설치 ####
+### istio 설치 ###
+마스터인 control 노드에서 아래 명령어를 수행한다. 
 ```
 ssh kube@control
 
@@ -33,6 +34,8 @@ kubectl annotate gateway bookinfo-gateway networking.istio.io/service-type=Clust
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-4.png)
 
+### 서비스 조회 ###
+mac 컴퓨터에서 아래 명령어를 수행한다. 
 ```
 # gcp-context 로 변경
 (base) automake@mini ~ % kubectl config use-context kubernetes-admin@kubernetes
