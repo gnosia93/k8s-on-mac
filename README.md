@@ -121,7 +121,7 @@ sudo systemctl restart containerd
 
 
 ### 4. 쿠버네티스 설치 ###
-
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 #### 툴 설치 ####
 ```
 sudo apt-get update
