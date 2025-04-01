@@ -41,5 +41,22 @@ nginx-node01   1/1     Running   0          2m19s   172.16.220.3   node01   <non
 kubectl run multi --image=nginx --dry-run=client -o yaml > multi.yaml
 
 vi multi.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: multi
+  name: multi
+spec:
+  containers:
+  - image: nginx
+    name: multi
+  - image: redis
+    name: redis
+  - image: memcached
+    name: memcached
 
+kubectl get pod
+NAME           READY   STATUS    RESTARTS   AGE
+multi          3/3     Running   0          62s
 ```
