@@ -1,4 +1,5 @@
 
+@2. pod 생성하기
 ```
 kubectl config use-context k8s
 kubectl create ns ecommerce
