@@ -15,9 +15,9 @@ $ sudo vi /private/etc/hosts
 
 $ ssh-keygen -t rsa
 # cd .ssh
-$ scp id_rsa.pub control:/home/kube/.ssh/authorized_keys
-$ scp id_rsa.pub node01:/home/kube/.ssh/authorized_keys
-$ scp id_rsa.pub node02:/home/kube/.ssh/authorized_keys
+$ scp id_rsa.pub kube@control:/home/kube/.ssh/authorized_keys
+$ scp id_rsa.pub kube@node01:/home/kube/.ssh/authorized_keys
+$ scp id_rsa.pub kube@node02:/home/kube/.ssh/authorized_keys
 
 ``` 
 
