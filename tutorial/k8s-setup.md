@@ -8,8 +8,16 @@
 * sudoer 등록 
 * 패스워드 없이 ssh 로그인
 ```
-ssh-keygen -t rsa
-scp id_rsa.pub 10.30.100.32:/root/.ssh/authorized_keys
+$ sudo vi /private/etc/hosts
+192.168.64.2    control
+192.168.64.3    node01
+192.168.64.4    node02
+
+$ ssh-keygen -t rsa
+$ scp id_rsa.pub control:/root/.ssh/authorized_keys
+$ scp id_rsa.pub node01:/root/.ssh/authorized_keys
+$ scp id_rsa.pub node02:/root/.ssh/authorized_keys
+
 ``` 
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
