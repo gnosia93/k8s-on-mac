@@ -12,3 +12,7 @@ istioctl install -f samples/bookinfo/demo-profile-no-gateways.yaml -y
 k get all -n istio-system
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-demo-profile-1.png)
+
+```
+kubectl kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v1.2.1" | kubectl apply -f -
+```
