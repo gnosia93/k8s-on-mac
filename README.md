@@ -1,5 +1,6 @@
 # k8s-on-mac
 
+
 ### 1. 인프라 프로비저닝 ###
 
 * UTM 설치 - https://mac.getutm.app/
@@ -7,6 +8,9 @@
 * VM 3개 만들기 - control/node01/node02
 * sudoer 등록 
 * 패스워드 없이 ssh 로그인 
+
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
+
 
 ### 2. VM 설정 ###
 
@@ -121,7 +125,6 @@ sudo systemctl restart containerd
 
 
 ### 4. 쿠버네티스 설치 ###
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubeadm-setup.png)
 #### 툴 설치 ####
 ```
 sudo apt-get update
