@@ -88,5 +88,5 @@ kubectl apply -f eshop-cart-app.yaml
 * 사이드 카 컨테이너
 ```
 kubectl get pod eshop-cart-app
-kubectl get pod eshop-cart-app -o yaml
+kubectl get pod eshop-cart-app -o yaml > eshop-cart-app.yaml
 ```
