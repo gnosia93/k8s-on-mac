@@ -3,6 +3,7 @@
 ### 1. UTM 설치 ###
 
 * utm 설치
+* Ubuntu 22.04.5 LTS (Jammy Jellyfish) ARM - https://cdimage.ubuntu.com/releases/jammy/release/
 * vm 3개 만들기
 * sudoer 등록 
 * 패스워드 없이 ssh 로그인 
