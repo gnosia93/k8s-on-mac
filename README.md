@@ -1,10 +1,11 @@
 # k8s-on-mac
 
 ### 1. UTM 설치 ###
-![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/utm.png)
 
-#### 1.4. sudoer 등록 ####
-#### 1.6. 패스워드 없이 ssh 로그인 ####
+* utm 설치
+* vm 3개 만들기
+* sudoer 등록 
+* 패스워드 없이 ssh 로그인 
 
 ### 2. OS 설정 ###
 
@@ -55,7 +56,7 @@ $ ip addr
 ```
 
 
-#### 네트워크 설정 ####
+#### 네트워크 파라미터 설정 ####
 ```
 #/etc/modules-load.d/k8s.conf 파일 생성
 sudo cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
