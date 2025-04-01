@@ -155,6 +155,8 @@ kubeadm join 192.168.64.2:6443 --token w5xx5j.ll0a847nghlx00q8 \
 	--discovery-token-ca-cert-hash sha256:49a3064aea3bded19c6b31a46dcfeaa7c7cebbc204fc1f3b4c9ab9a130fa8920
 ```
 
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/kubectl-pods.png)
+
 ## 참고자료 ##
 
 * [UTM 고정 IP 할당](https://velog.io/@chosj1526/UTM-ubuntu-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%B6%94%EA%B0%80-%EB%B0%8F-%EA%B3%A0%EC%A0%95-ip-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0)
