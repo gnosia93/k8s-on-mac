@@ -8,7 +8,7 @@ API version: 2
 sudo ETCDCTL_API=3 etcdctl \
 --endpoints=https://192.168.64.2:2379 \
 --cert=/etc/kubernetes/pki/etcd/server.crt \
---key-file=/etc/kubernetes/pki/etcd/server.key \
+--key=/etc/kubernetes/pki/etcd/server.key \
 --cacert=/etc/kubernetes/pki/etcd/ca.crt
 snapshot save ./etcd-snapshot.db
 ```
