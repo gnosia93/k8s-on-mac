@@ -1,5 +1,13 @@
 #### 1. etcd 백업 ####
+```
+sudo apt install etcd-client
+etcdctl --version
+etcdctl version: 3.3.25
+API version: 2
 
+
+
+```
 
 #### 2. pod 생성하기 ####
 ```
