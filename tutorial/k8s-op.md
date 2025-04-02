@@ -29,6 +29,9 @@ sudo vi etcd.yaml
 78   - hostPath:
 79       path: /var/lib/etcd        --> /home/kube/tmp/etcd-previous  로 수정한다.
 ```
+crictl 로 static 파드를 확인한다. 
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/crictl.png)
+
 
 #### 2. pod 생성하기 ####
 ```
