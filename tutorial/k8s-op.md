@@ -19,8 +19,15 @@ sudo ETCDCTL_API=3 etcdctl \
 
 sudo tree tmp/etcd-previous/
 
+# static pod 임을 확인
 k get pod -n kube-system | grep etcd
 etcd-control                               1/1     Running   6 (15h ago)   29h
+
+# static pod 디렉토리로 가서 hostpath 업데이트 
+cd /etc/kubernetes/manifests/
+sudo vi etcd.yaml
+78   - hostPath:
+79       path: /var/lib/etcd        --> /home/kube/tmp/etcd-previous  로 수정한다.
 ```
 
 #### 2. pod 생성하기 ####
