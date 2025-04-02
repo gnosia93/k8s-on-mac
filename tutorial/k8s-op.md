@@ -1,10 +1,11 @@
-#### 1. etcd 백업 ####
+#### 1. etcd 백업 & 복구 ####
 ```
 sudo apt install -y etcd-client tree
 etcdctl --version
 etcdctl version: 3.3.25
 API version: 2
 
+# 백업
 mkdir tmp
 sudo ETCDCTL_API=3 etcdctl \
   --endpoints=https://192.168.64.2:2379 \
@@ -13,6 +14,7 @@ sudo ETCDCTL_API=3 etcdctl \
   --cacert=/etc/kubernetes/pki/etcd/ca.crt \
   snapshot save tmp/etcd-snapshot.db
 
+# 복구
 sudo ETCDCTL_API=3 etcdctl \
   --data-dir tmp/etcd-previous \
   snapshot restore tmp/etcd-snapshot.db
