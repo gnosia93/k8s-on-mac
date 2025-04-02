@@ -52,7 +52,7 @@ mac 컴퓨터에서 아래 명령어를 수행한다.
 ```
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/istio-productpage.png)
 
-### 모니터링 addon 설치 ###
+### telemetry addon 설치 ###
 ```
 kubectl apply -f samples/addons
 kubectl rollout status deployment/kiali -n istio-system
