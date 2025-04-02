@@ -1,6 +1,6 @@
 #### 1. etcd 백업 ####
 ```
-sudo apt install etcd-client
+sudo apt install -y etcd-client tree
 etcdctl --version
 etcdctl version: 3.3.25
 API version: 2
@@ -17,6 +17,10 @@ sudo ETCDCTL_API=3 etcdctl \
   --data-dir tmp/etcd-previous \
   snapshot restore tmp/etcd-snapshot.db
 
+sudo tree tmp/etcd-previous/
+
+k get pod -n kube-system | grep etcd
+etcd-control                               1/1     Running   6 (15h ago)   29h
 ```
 
 #### 2. pod 생성하기 ####
