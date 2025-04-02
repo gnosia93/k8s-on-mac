@@ -195,6 +195,7 @@ UTM VM 의 network mode 는 shared 모드로 설정되어 있고, enp0s1 인터�
 * 192.168.64.2/24 는 [고정 IP 설정] 에서 할당한 IP 로, VM 간의 통신 또는 외부와의 통신에서 사용된다.
 
 ![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/ip-addr.png)
+![](https://github.com/gnosia93/k8s-on-mac/blob/main/images/netstat-ltup.png)
 
 ## 참고자료 ##
 
