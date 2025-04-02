@@ -7,11 +7,16 @@ API version: 2
 
 mkdir tmp
 sudo ETCDCTL_API=3 etcdctl \
---endpoints=https://192.168.64.2:2379 \
---cert=/etc/kubernetes/pki/etcd/server.crt \
---key=/etc/kubernetes/pki/etcd/server.key \
---cacert=/etc/kubernetes/pki/etcd/ca.crt \
-snapshot save tmp/etcd-snapshot.db
+  --endpoints=https://192.168.64.2:2379 \
+  --cert=/etc/kubernetes/pki/etcd/server.crt \
+  --key=/etc/kubernetes/pki/etcd/server.key \
+  --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+  snapshot save tmp/etcd-snapshot.db
+
+sudo ETCDCTL_API=3 etcdctl \
+  --data-dir tmp/etcd-previous \
+  snapshot restore tmp/etcd-snapshot.db
+
 ```
 
 #### 2. pod 생성하기 ####
